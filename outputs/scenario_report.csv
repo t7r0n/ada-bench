@@ -1,0 +1,7 @@
+scenario,cases,blocks,reviews,mean_severity,mean_score,top_evidence_id,recommended_action
+important gap,24,3,2,3.333,0.5309,ev_0077,block release until replay is understood
+important reviewer handoff,24,2,4,2.583,0.4221,ev_0121,block release until replay is understood
+pharma policy boundary,24,2,3,1.708,0.2541,ev_0033,block release until replay is understood
+question failure replay,24,2,4,3.333,0.5549,ev_0110,block release until replay is understood
+single drift,24,2,3,2.5,0.3868,ev_0088,block release until replay is understood
+single evidence recall,24,3,3,1.875,0.2891,ev_0132,block release until replay is understood

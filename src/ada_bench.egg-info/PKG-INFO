@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: ada-bench
+Version: 0.1.0
+Summary: An open, reproducible retrospective benchmark for predicting clinical anti drug antibody (ADA) rates on FDA approved monoclonal antibodies -
+Author: Tarun Aditya Kusupati
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# Ada Bench
+
+An open, reproducible retrospective benchmark for predicting clinical anti drug antibody (ADA) rates on FDA approved monoclonal antibodies - the de facto leaderboard ALP Bio can quote in every BD meeting.
+
+## Why This Exists
+
+The single most important question a pharma partner will ask Punit in a BD meeting is not "how does your organoid work?" - it is " how do I know your predictor generalises beyond what you trained on? " ADA risk is famously dataset fragile: most published immunogenicity predictors (e.g. NetMHCIIpan class predictors of MHC II binding) overfit to the small set of cleared biologics that have public clinical ADA data (NetMHCIIpan ref).
+
+## What It Builds
+
+- Replays synthetic `single` and `important` cases against the project's evidence rules.
+- Scores `single_coverage`, `important_risk`, and `question_precision` so regressions are visible in CSV and JSON.
+- Plants `single drift` and `important gap` failures as negative controls.
+- Writes citation-locked decision claims; unsupported claims fail verification.
+- Exports a review dashboard and demo pack for `ada-bench` without hosted services.
+
+## Local Run
+
+```bash
+uv sync
+uv run ada-bench all
+uv run pytest -q
+uv run ruff check .
+```
+
+## Outputs
+
+- `outputs/analysis.json`
+- `outputs/scenario_report.csv`
+- `outputs/decision_report.md`
+- `outputs/evidence_packet.md`
+- `outputs/dashboard.html`
+- `outputs/demo_pack.zip`
+
+## Sources
+
+- https://www.venturekick.ch/ALP-Bio-raises-USD-22M-preseed-to-address-immunogenicity-risk-in-antibody-development
+- https://www.swissbiotech.org/news/alp-bio-ag-raises-chf-1-75-million-pre-seed-to-de-risk-antibody-development/
+- https://www.eu-startups.com/2026/04/swiss-biotech-startup-alp-bio-raises-e1-9-million-to-advance-immune-organoid-and-ai-platform/
+- https://www.sci-tech-today.com/news/alp-bio-raises-1-9m/
+- https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.0/
+- https://predictioncenter.org/
+
+## Boundary
+
+This repository uses synthetic fixtures only. It has no credentials, no customer data, no outreach data, and no dependency on a hosted API.

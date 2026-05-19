@@ -1,0 +1,2 @@
+[console_scripts]
+ada-bench = ada_bench.cli:main

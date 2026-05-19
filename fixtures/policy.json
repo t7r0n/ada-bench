@@ -1,0 +1,18 @@
+{
+  "company": "ALP Bio",
+  "repo": "ada-bench",
+  "metrics": [
+    "single_coverage",
+    "important_risk",
+    "question_precision",
+    "pharma_latency"
+  ],
+  "failure_modes": [
+    "single_drift",
+    "important_gap",
+    "question_misroute",
+    "pharma_blindspot"
+  ],
+  "minimum_cases": 144,
+  "requires_evidence_markers": true
+}
