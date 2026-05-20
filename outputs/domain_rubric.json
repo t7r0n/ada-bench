@@ -1,64 +1,57 @@
 {
   "repo": "ada-bench",
-  "company": "ALP Bio",
+  "company": "Ada Bench",
   "rubric_axes": [
     {
-      "axis": "single_coverage",
+      "axis": "evidence_coverage",
       "failures": [
-        "single_drift"
+        "evidence_drift"
       ],
       "evidence_required": true
     },
     {
-      "axis": "important_risk",
+      "axis": "handoff_risk",
       "failures": [
-        "important_gap"
+        "handoff_gap"
       ],
       "evidence_required": true
     },
     {
-      "axis": "question_precision",
+      "axis": "claim_precision",
       "failures": [
-        "question_misroute"
+        "claim_misroute"
       ],
       "evidence_required": true
     },
     {
-      "axis": "pharma_latency",
+      "axis": "review_latency",
       "failures": [
-        "pharma_blindspot"
+        "review_blindspot"
       ],
       "evidence_required": true
     }
   ],
   "archetypes": [
     {
-      "name": "single evidence replay",
-      "trigger": "single signal changes while important context is stale",
+      "name": "evidence replay",
+      "trigger": "source evidence changes while workflow context is stale",
       "expected": "block release until cited evidence is regenerated"
     },
     {
-      "name": "important boundary probe",
-      "trigger": "important handoff crosses a policy or trust boundary",
+      "name": "handoff boundary probe",
+      "trigger": "handoff crosses a policy or trust boundary",
       "expected": "route to reviewer with evidence packet"
     },
     {
-      "name": "question regression harness",
-      "trigger": "question behavior regresses against the last accepted fixture",
+      "name": "claim regression harness",
+      "trigger": "claim behavior regresses against the last accepted fixture",
       "expected": "open a regression issue with trace and benchmark delta"
     },
     {
-      "name": "pharma operator packet",
-      "trigger": "pharma output needs a human-readable audit packet",
+      "name": "review operator packet",
+      "trigger": "review output needs a human-readable audit packet",
       "expected": "accept only if decision claims cite fixture evidence"
     }
   ],
-  "sources_used": [
-    "https://www.venturekick.ch/ALP-Bio-raises-USD-22M-preseed-to-address-immunogenicity-risk-in-antibody-development",
-    "https://www.swissbiotech.org/news/alp-bio-ag-raises-chf-1-75-million-pre-seed-to-de-risk-antibody-development/",
-    "https://www.eu-startups.com/2026/04/swiss-biotech-startup-alp-bio-raises-e1-9-million-to-advance-immune-organoid-and-ai-platform/",
-    "https://www.sci-tech-today.com/news/alp-bio-raises-1-9m/",
-    "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.0/",
-    "https://predictioncenter.org/"
-  ]
+  "sources_used": []
 }

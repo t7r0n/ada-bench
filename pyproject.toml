@@ -1,7 +1,7 @@
 [project]
 name = "ada-bench"
 version = "0.1.0"
-description = "An open, reproducible retrospective benchmark for predicting clinical anti drug antibody (ADA) rates on FDA approved monoclonal antibodies -"
+description = "An open, reproducible retrospective benchmark for predicting clinical anti-drug antibody rates on FDA-approved monoclona"
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [

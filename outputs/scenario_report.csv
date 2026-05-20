@@ -1,5 +1,5 @@
 scenario,cases,blocks,reviews,mean_severity,mean_score,top_evidence_id,recommended_action
-important boundary probe,36,3,4,2.528,0.3948,ev_0077,route to reviewer with evidence packet
-pharma operator packet,36,4,5,2.556,0.4258,ev_0055,accept only if decision claims cite fixture evidence
-question regression harness,36,3,5,2.528,0.3733,ev_0066,open a regression issue with trace and benchmark delta
-single evidence replay,36,4,5,2.611,0.4008,ev_0132,block release until cited evidence is regenerated
+claim regression harness,36,3,5,2.528,0.3984,ev_0066,open a regression issue with trace and benchmark delta
+evidence replay,36,4,5,2.611,0.4315,ev_0000,block release until cited evidence is regenerated
+handoff boundary probe,36,3,4,2.528,0.3805,ev_0121,route to reviewer with evidence packet
+review operator packet,36,4,5,2.556,0.4012,ev_0099,accept only if decision claims cite fixture evidence

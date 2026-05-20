@@ -6,53 +6,13 @@ from pathlib import Path
 from typing import Any
 
 
-COMPANY = "ALP Bio"
-REPO = "ada-bench"
-PROJECT_TERMS = [
-    "single",
-    "important",
-    "question",
-    "pharma",
-    "partner",
-    "punit",
-    "meeting",
-    "organoid"
-]
-PROJECT_METRICS = [
-    "single_coverage",
-    "important_risk",
-    "question_precision",
-    "pharma_latency"
-]
-PROJECT_FAILURES = [
-    "single_drift",
-    "important_gap",
-    "question_misroute",
-    "pharma_blindspot"
-]
-PROJECT_ARCHETYPES = [
-    {
-        "name": "single evidence replay",
-        "trigger": "single signal changes while important context is stale",
-        "expected": "block release until cited evidence is regenerated"
-    },
-    {
-        "name": "important boundary probe",
-        "trigger": "important handoff crosses a policy or trust boundary",
-        "expected": "route to reviewer with evidence packet"
-    },
-    {
-        "name": "question regression harness",
-        "trigger": "question behavior regresses against the last accepted fixture",
-        "expected": "open a regression issue with trace and benchmark delta"
-    },
-    {
-        "name": "pharma operator packet",
-        "trigger": "pharma output needs a human-readable audit packet",
-        "expected": "accept only if decision claims cite fixture evidence"
-    }
-]
-PROJECT_DIRECTION = "An open, reproducible retrospective benchmark for predicting clinical anti-drug antibody rates on FDA-approved monoclonal antibodies. The output is a partner-facing evidence pack ALP Bio can use to show where an immunogenicity predictor generalizes, where it fails, and what evidence supports the claim."
+COMPANY = 'Ada Bench'
+REPO = 'ada-bench'
+PROJECT_TERMS = ['evidence', 'workflow', 'review', 'claims', 'fixtures', 'replay', 'handoff', 'trace', 'policy', 'decision', 'coverage', 'latency']
+PROJECT_METRICS = ['evidence_coverage', 'handoff_risk', 'claim_precision', 'review_latency']
+PROJECT_FAILURES = ['evidence_drift', 'handoff_gap', 'claim_misroute', 'review_blindspot']
+PROJECT_ARCHETYPES = [{'name': 'evidence replay', 'trigger': 'source evidence changes while workflow context is stale', 'expected': 'block release until cited evidence is regenerated'}, {'name': 'handoff boundary probe', 'trigger': 'handoff crosses a policy or trust boundary', 'expected': 'route to reviewer with evidence packet'}, {'name': 'claim regression harness', 'trigger': 'claim behavior regresses against the last accepted fixture', 'expected': 'open a regression issue with trace and benchmark delta'}, {'name': 'review operator packet', 'trigger': 'review output needs a human-readable audit packet', 'expected': 'accept only if decision claims cite fixture evidence'}]
+PROJECT_DIRECTION = 'An open, reproducible retrospective benchmark for predicting clinical anti-drug antibody rates on FDA-approved monoclonal antibodies. The output is a partner-facing evidence pack Ada Bench can use to show where an immunogenicity predictor generalizes, where it fails, and what evidence supports the claim.'
 
 
 def _short(value: str, limit: int = 44) -> str:
@@ -142,7 +102,7 @@ def build_signal_model(rows: list[dict[str, Any]], clusters: list[dict[str, Any]
         "review_share": round(review / total, 4),
         "top_leverage_points": leverage,
         "readout": (
-            f"{COMPANY} gets a local, deterministic pressure test around "
+            "This local harness runs a deterministic pressure test around "
             f"{PROJECT_TERMS[0]}, {PROJECT_TERMS[1]}, and {PROJECT_TERMS[2]}. "
             f"The useful part is not the dashboard; it is the repeatable evidence path "
             f"from fixture to failure to operator action."

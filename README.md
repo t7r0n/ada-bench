@@ -1,6 +1,6 @@
 # Ada Bench
 
-An open, reproducible retrospective benchmark for predicting clinical anti-drug antibody rates on FDA-approved monoclonal antibodies. The output is a partner-facing evidence pack ALP Bio can use to show where an immunogenicity predictor generalizes, where it fails, and what evidence supports the claim.
+An open, reproducible retrospective benchmark for predicting clinical anti-drug antibody rates on FDA-approved monoclonal antibodies. The output is a partner-facing evidence pack Ada Bench can use to show where an immunogenicity predictor generalizes, where it fails, and what evidence supports the claim.
 
 ![Ada Bench working dashboard](outputs/project_working.svg)
 
@@ -52,15 +52,6 @@ uv run ruff check .
 - `outputs/decision_report.md`
 - `outputs/strategy_model.json`
 - `outputs/demo_pack.zip`
-
-## Sources
-
-- https://www.venturekick.ch/ALP-Bio-raises-USD-22M-preseed-to-address-immunogenicity-risk-in-antibody-development
-- https://www.swissbiotech.org/news/alp-bio-ag-raises-chf-1-75-million-pre-seed-to-de-risk-antibody-development/
-- https://www.eu-startups.com/2026/04/swiss-biotech-startup-alp-bio-raises-e1-9-million-to-advance-immune-organoid-and-ai-platform/
-- https://www.sci-tech-today.com/news/alp-bio-raises-1-9m/
-- https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.0/
-- https://predictioncenter.org/
 
 ## Boundary
 

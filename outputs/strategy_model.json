@@ -1,69 +1,73 @@
 {
-  "company": "ALP Bio",
+  "company": "Ada Bench",
   "repo": "ada-bench",
   "terms": [
-    "single",
-    "important",
-    "question",
-    "pharma",
-    "partner",
-    "punit",
-    "meeting",
-    "organoid"
+    "evidence",
+    "workflow",
+    "review",
+    "claims",
+    "fixtures",
+    "replay",
+    "handoff",
+    "trace",
+    "policy",
+    "decision",
+    "coverage",
+    "latency"
   ],
   "metrics": [
-    "single_coverage",
-    "important_risk",
-    "question_precision",
-    "pharma_latency"
+    "evidence_coverage",
+    "handoff_risk",
+    "claim_precision",
+    "review_latency"
   ],
   "failure_modes": [
-    "single_drift",
-    "important_gap",
-    "question_misroute",
-    "pharma_blindspot"
+    "evidence_drift",
+    "handoff_gap",
+    "claim_misroute",
+    "review_blindspot"
   ],
-  "evidence_density": 18.75,
+  "evidence_density": 18.5,
   "pressure_index": 0.3167,
   "blocked_share": 0.0972,
   "review_share": 0.1319,
   "top_leverage_points": [
     {
       "rank": 1,
-      "scenario": "single evidence replay",
-      "metric": "single_coverage",
-      "failure_mode": "single_drift",
-      "evidence": "ev_0132",
+      "scenario": "evidence replay",
+      "metric": "evidence_coverage",
+      "failure_mode": "evidence_drift",
+      "evidence": "ev_0000",
       "operator_action": "block release until cited evidence is regenerated",
       "severity": 2.611
     },
     {
       "rank": 2,
-      "scenario": "pharma operator packet",
-      "metric": "important_risk",
-      "failure_mode": "important_gap",
-      "evidence": "ev_0055",
+      "scenario": "review operator packet",
+      "metric": "handoff_risk",
+      "failure_mode": "handoff_gap",
+      "evidence": "ev_0099",
       "operator_action": "accept only if decision claims cite fixture evidence",
       "severity": 2.556
     },
     {
       "rank": 3,
-      "scenario": "question regression harness",
-      "metric": "question_precision",
-      "failure_mode": "question_misroute",
+      "scenario": "claim regression harness",
+      "metric": "claim_precision",
+      "failure_mode": "claim_misroute",
       "evidence": "ev_0066",
       "operator_action": "open a regression issue with trace and benchmark delta",
       "severity": 2.528
     },
     {
       "rank": 4,
-      "scenario": "important boundary probe",
-      "metric": "pharma_latency",
-      "failure_mode": "pharma_blindspot",
-      "evidence": "ev_0077",
+      "scenario": "handoff boundary probe",
+      "metric": "review_latency",
+      "failure_mode": "review_blindspot",
+      "evidence": "ev_0121",
       "operator_action": "route to reviewer with evidence packet",
       "severity": 2.528
     }
   ],
-  "readout": "ALP Bio gets a local, deterministic pressure test around single, important, and question. The useful part is not the dashboard; it is the repeatable evidence path from fixture to failure to operator action."
+  "readout": "This local harness runs a deterministic pressure test around evidence, workflow, and review. The useful part is not the dashboard; it is the repeatable evidence path from fixture to failure to operator action."
 }
