@@ -1,18 +1,18 @@
 # Ada Bench
 
-An open, reproducible retrospective benchmark for predicting clinical anti drug antibody (ADA) rates on FDA approved monoclonal antibodies - the de facto leaderboard ALP Bio can quote in every BD meeting.
+An open, reproducible retrospective benchmark for predicting clinical anti-drug antibody rates on FDA-approved monoclonal antibodies. The output is a partner-facing evidence pack ALP Bio can use to show where an immunogenicity predictor generalizes, where it fails, and what evidence supports the claim.
 
 ![Ada Bench working dashboard](outputs/project_working.svg)
 
 ## Why it exists
 
-The single most important question a pharma partner will ask Punit in a BD meeting is not "how does your organoid work?" - it is " how do I know your predictor generalises beyond what you trained on?
+The first serious question in a pharma BD conversation is not whether the organoid is interesting. It is whether the predictor generalizes beyond the molecules and assays it was tuned on.
 
 Most internal demos stop at a pretty chart. This repository is built around the harder part: a repeatable path from fixture, to failure, to evidence, to the operator action a serious team would actually trust.
 
 ## What is inside
 
-- A deterministic replay harness tuned around single, important, and question.
+- A deterministic replay harness tuned around ADA generalization, blind antibody splits, and BD-grade evidence.
 - Company-specific strategy code in `src/ada_bench/strategy.py`, not just README-level customization.
 - Citation-locked reports where every decision claim has to point back to a generated evidence ID.
 - Two visual artifacts generated from the latest run: `outputs/project_working.svg` and `outputs/evidence_map.svg`.

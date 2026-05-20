@@ -1,6 +1,6 @@
 # Decision Report: Ada Bench
 
-An open, reproducible retrospective benchmark for predicting clinical anti drug antibody (ADA) rates on FDA approved monoclonal antibodies - the de facto leaderboard ALP Bio can quote in every BD meeting.
+An open, reproducible retrospective benchmark for predicting clinical anti-drug antibody rates on FDA-approved monoclonal antibodies. The output is a partner-facing evidence pack ALP Bio can use to show where an immunogenicity predictor generalizes, where it fails, and what evidence supports the claim.
 
 ## Evidence-Grounded Findings
 

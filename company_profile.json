@@ -5,8 +5,8 @@
   "package": "ada_bench",
   "cli": "ada-bench",
   "title": "Ada Bench",
-  "problem": "The single most important question a pharma partner will ask Punit in a BD meeting is not \"how does your organoid work?\" - it is \" how do I know your predictor generalises beyond what you trained on? \" ADA risk is famously dataset fragile: most published immunogenicity predictors (e.g. NetMHCIIpan class predictors of MHC II binding) overfit to the small set of cleared biologics that have public clinical ADA data (NetMHCIIpan ref).",
-  "direction": "An open, reproducible retrospective benchmark for predicting clinical anti drug antibody (ADA) rates on FDA approved monoclonal antibodies - the de facto leaderboard ALP Bio can quote in every BD meeting.",
+  "problem": "The first serious question in a pharma BD conversation is not whether the organoid is interesting. It is whether the predictor generalizes beyond the molecules and assays it was tuned on. ADA risk is dataset fragile: most published immunogenicity predictors can overfit to the limited set of approved biologics with public clinical ADA data.",
+  "direction": "An open, reproducible retrospective benchmark for predicting clinical anti-drug antibody rates on FDA-approved monoclonal antibodies. The output is a partner-facing evidence pack ALP Bio can use to show where an immunogenicity predictor generalizes, where it fails, and what evidence supports the claim.",
   "why": "The judgement is which deliverable to put in the CBO's hand. A model would generate a paper; a benchmark generates meetings. For a pre seed company whose next milestone is a pharma partnership, meetings are the only metric that matters.",
   "terms": [
     "single",
