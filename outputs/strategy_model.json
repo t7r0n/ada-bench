@@ -1,0 +1,69 @@
+{
+  "company": "ALP Bio",
+  "repo": "ada-bench",
+  "terms": [
+    "single",
+    "important",
+    "question",
+    "pharma",
+    "partner",
+    "punit",
+    "meeting",
+    "organoid"
+  ],
+  "metrics": [
+    "single_coverage",
+    "important_risk",
+    "question_precision",
+    "pharma_latency"
+  ],
+  "failure_modes": [
+    "single_drift",
+    "important_gap",
+    "question_misroute",
+    "pharma_blindspot"
+  ],
+  "evidence_density": 18.75,
+  "pressure_index": 0.3167,
+  "blocked_share": 0.0972,
+  "review_share": 0.1319,
+  "top_leverage_points": [
+    {
+      "rank": 1,
+      "scenario": "single evidence replay",
+      "metric": "single_coverage",
+      "failure_mode": "single_drift",
+      "evidence": "ev_0132",
+      "operator_action": "block release until cited evidence is regenerated",
+      "severity": 2.611
+    },
+    {
+      "rank": 2,
+      "scenario": "pharma operator packet",
+      "metric": "important_risk",
+      "failure_mode": "important_gap",
+      "evidence": "ev_0055",
+      "operator_action": "accept only if decision claims cite fixture evidence",
+      "severity": 2.556
+    },
+    {
+      "rank": 3,
+      "scenario": "question regression harness",
+      "metric": "question_precision",
+      "failure_mode": "question_misroute",
+      "evidence": "ev_0066",
+      "operator_action": "open a regression issue with trace and benchmark delta",
+      "severity": 2.528
+    },
+    {
+      "rank": 4,
+      "scenario": "important boundary probe",
+      "metric": "pharma_latency",
+      "failure_mode": "pharma_blindspot",
+      "evidence": "ev_0077",
+      "operator_action": "route to reviewer with evidence packet",
+      "severity": 2.528
+    }
+  ],
+  "readout": "ALP Bio gets a local, deterministic pressure test around single, important, and question. The useful part is not the dashboard; it is the repeatable evidence path from fixture to failure to operator action."
+}
